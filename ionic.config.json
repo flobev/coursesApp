@@ -1,0 +1,7 @@
+{
+  "name": "ionicCoursesApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
