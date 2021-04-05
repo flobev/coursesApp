@@ -19,6 +19,7 @@ export class LoginPage implements OnInit {
   constructor(
     private loading: LoadingController,
     private platform: Platform,
+    private localStorage: NativeStorage,
   ) { }
 
   async ngOnInit() {
@@ -37,6 +38,12 @@ export class LoginPage implements OnInit {
     });
     await load.present();
     console.log('Email : ' + this.email, 'Mdp :' + this.pass);
+
+    localStorage.setItem('email',this.email);
+    localStorage.setItem('mdp',this.pass);
+
+    console.log('Données stockées = ' + localStorage.getItem('email'));
+
     await this.loading.dismiss();
   }
 }
