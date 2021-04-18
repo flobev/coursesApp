@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import * as converter from 'xml-js';
 import { ArticleFeed } from '../interfaces/article-feed';
+import { CourseFeed } from '../interfaces/course-feed';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +11,33 @@ import { ArticleFeed } from '../interfaces/article-feed';
 export class FeedsService {
 
   constructor(private http: HttpClient) { }
+
+    getDataBJsonCourse(): Promise <CourseFeed[]> {
+        return new Promise((resolve, rejects) => {
+            this.http.request('GET', '/assets/data/courses.json').subscribe((items: any) => {
+                //Assignation des items dans le fichier json
+                items = items.courses;
+                console.log(items);
+                //Création d'un tableau d'articles à vide
+                let courses: CourseFeed[] = []
+                //Parcours des items d'articles
+                for (const item of items) {
+                    //Ajout dans le tableau la clé et la valeur de l'article
+                    courses.push({
+                        title: item.titre,
+                        description: item.intitule,
+                        author: item.auteur,
+                        infos: item.infos
+                    })
+                }
+                console.log(courses);
+                //Si la requête s'est bien déroulé alors envoie des données
+                resolve(courses);
+                //Si la requête ne s'est pas bien déroulé alors affichage des erreurs
+                rejects("Aucunes données n'est reçu !!")
+            })
+        })
+    }
 
     getDataBJson(): Promise <ArticleFeed[]> {
         return new Promise((resolve, rejects) => {

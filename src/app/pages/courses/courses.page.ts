@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 import { FeedsService } from '../../services/feeds.service';
 import { ArticleFeed } from '../../interfaces/article-feed';
+import { CourseFeed } from '../../interfaces/course-feed';
 
 @Component({
   selector: 'app-courses',
@@ -10,7 +11,7 @@ import { ArticleFeed } from '../../interfaces/article-feed';
 })
 export class CoursesPage implements OnInit {
 
-  feeds: ArticleFeed[];
+  feeds: CourseFeed[];
 
   pictures: string[] = [
     "https://images2.minutemediacdn.com/image/fetch/w_736,h_485,c_fill,g_auto,f_auto/https%3A%2F%2Fallucanheat.com%2Fwp-content%2Fuploads%2Fgetty-images%2F2017%2F07%2F164213930-850x560.jpeg",
@@ -28,12 +29,12 @@ export class CoursesPage implements OnInit {
 
     this.router.events.subscribe(async(event) => {
         if (event instanceof NavigationEnd) {
-            this.feeds = (this.route.snapshot.data.json) ? await this.feed.getDataBJson() : await this.feed.requestByUrlTrashTalk()
+            this.feeds = (this.route.snapshot.data.json) ? await this.feed.getDataBJsonCourse() : null
         }
     });
   }
  
   async ngOnInit() {
-    this.feeds = await this.feed.getDataBJson()
+    this.feeds = await this.feed.getDataBJsonCourse()
   }
 }
