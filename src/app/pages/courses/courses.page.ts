@@ -1,3 +1,5 @@
+import { YoutubeVideoComponent } from './../../modals/youtube-video/youtube-video.component';
+import { ModalController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 import { FeedsService } from '../../services/feeds.service';
@@ -13,6 +15,8 @@ export class CoursesPage implements OnInit {
 
   feeds: CourseFeed[];
 
+  video: string = '';
+
   pictures: string[] = [
     "https://images2.minutemediacdn.com/image/fetch/w_736,h_485,c_fill,g_auto,f_auto/https%3A%2F%2Fallucanheat.com%2Fwp-content%2Fuploads%2Fgetty-images%2F2017%2F07%2F164213930-850x560.jpeg",
     "https://static.lexpress.fr/medias_9602/w_640,h_358,c_fill,g_center/v1402301648/la-star-du-miami-heat-lebron-james-g-face-a-tim-duncan-lors-du-match-n-2-de-la-finale-nba-face-aux-spurs-le-8-juin-2014-a-san-antonio_4916337.jpg",
@@ -21,7 +25,7 @@ export class CoursesPage implements OnInit {
     "http://www.slate.fr/sites/default/files/styles/1200x680/public/parker_0.jpg"
 ]
 
-  constructor(private router: Router, private route: ActivatedRoute, private feed: FeedsService) {}
+  constructor(private router: Router, private route: ActivatedRoute, private feed: FeedsService, private modal: ModalController) {}
   
   //Se déclenche lorsque l'utilisateur arrive sur cette page
   ionViewWillEnter() {
@@ -36,5 +40,12 @@ export class CoursesPage implements OnInit {
  
   async ngOnInit() {
     this.feeds = await this.feed.getDataBJsonCourse()
+  }
+
+  async goToVideo() {
+    const modal = await this.modal.create({
+        component: YoutubeVideoComponent
+    });
+    return await modal.present();
   }
 }
