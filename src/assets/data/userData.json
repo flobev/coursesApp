@@ -1,0 +1,9 @@
+{
+    "user":"",
+    "firstname":"",
+    "lastname":"",
+    "email":"",
+    "dateOfBirth":"",
+    "mdp":"",
+    "confirmMdp":""
+}

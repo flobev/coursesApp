@@ -5,5 +5,38 @@
 </ion-header>
 
 <ion-content>
+  <ion-row class="form">
+
+    <ion-col size="12">
+      <ion-item>
+        <ion-label position="floating">Firstname</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Lastname</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Phone</ion-label>
+        <ion-input type="tel"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Re-Password</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col size="12">
+      <ion-button expand="full" class="btnLogin" (click)="register()">Login</ion-button>
+    </ion-col>
+    <p> <a routerLink="/login">You already have an account ? Login</a> </p>
+  </ion-row>
 
 </ion-content>

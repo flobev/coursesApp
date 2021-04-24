@@ -1,0 +1,158 @@
+{
+    "courses": [
+        {
+            "categorie": "Développement",
+            "titre": "Formation Complète Développeur Web",
+            "intitule": "Le Développement Web de A à Z. Apprenez HTML, CSS, Javascript, jQuery, Bootstrap, PHP, MySQL, Wordpress...",
+            "auteur": "John Taieb (Codeur), Apprendre à Coder",
+            "infos": "38 heures au total\n239 sessions\nTous les niveaux"
+        },
+        {
+            "categorie": "Développement",
+            "titre": "Développeur Python - La Formation Complète 2021",
+            "intitule": "Formation pour apprendre à créer votre propre JEU VIDÉO de PLATEFORME EN 3D.",
+            "auteur": "Thibault Houdon | Formateur et développeur Python, Docstring | Formations Python en ligne",
+            "infos": "8 heures au total\n68 sessions\nDébutant"
+        },
+        {
+            "categorie": "Développement",
+            "titre": "Formation Complète Développeur de jeux vidéo - UNITY3D",
+            "intitule": "Apprenez à créer des applications Web, des applications de bureau et le traitement de données avec Python.",
+            "auteur": "Jean-philippe Parein",
+            "infos": "23,5 heures au total\n418 sessions\nTous les niveaux"
+        },
+        {
+            "categorie": "Développement",
+            "titre": "Le Deep Learning de A à Z",
+            "intitule": "Data Science, Business Analytics, Data Analysis, Data Mining, Tableau, Statistiques, Modélisation, Régression, SQL, SSIS",
+            "auteur": "Hadelin de Ponteves, Charles Bordet",
+            "infos": "19,5 heures au total\n207 sessions\nDébutant"
+        },
+        {
+            "categorie": "Développement",
+            "titre": "Les Data Sciences de A à Z",
+            "intitule": "Le développement de jeux vidéo de A à Z. Distribuez, Monétisez, QuizzGame, Smartphone,FPS, Google Store, avec UNITY 3D",
+            "auteur": "Hadelin de Ponteves, Ligency Team",
+            "infos": "44 heures au total\n229 sessions\nDébutant"
+        },
+        {
+            "categorie": "Développement",
+            "titre": null,
+            "intitule": "Apprenez à créer des algorithmes de Deep Learning en Python par des experts en Machine Learning & Data science.",
+            "auteur": "Jean-philippe Parein",
+            "infos": "18,5 heures au total\n176 sessions\nTous les niveaux"
+        },
+        {
+            "categorie": "Développement",
+            "titre": "Formation Complète Développeur Web",
+            "intitule": "Apprendre le langage Java facilement, 45 exercices corrigés inclus",
+            "auteur": "John Taieb (Codeur), Apprendre à Coder",
+            "infos": "12,5 heures au total\n139 sessions\nDébutant"
+        },
+        {
+            "categorie": "Développement",
+            "titre": "Formation Création de Jeux Vidéo - Unreal Engine 4 avec NICO",
+            "intitule": "Un cours javascript, facile à digérer, plein d'exemples réels et de démonstrations étape par étape.",
+            "auteur": "NICO Youtube",
+            "infos": "7 heures au total\n67 sessions\nTous les niveaux"
+        },
+        {
+            "categorie": "Développement",
+            "titre": "Développeur Python - La Formation Complète 2021",
+            "intitule": "Apprendre la programmation en partant de zéro et créer des applications mobiles iOS Android avec Xamarin Forms et le C#",
+            "auteur": "Thibault Houdon | Formateur et développeur Python, Docstring | Formations Python en ligne",
+            "infos": "26 heures au total\n195 sessions\nTous les niveaux"
+        },
+        {
+            "categorie": "Développement",
+            "titre": "Les Data Sciences de A à Z",
+            "intitule": "React en profondeur à partir de zéro. Apprends Reactjs, Redux, React Router 4, Authentification, BDD et bien plus !",
+            "auteur": "Hadelin de Ponteves, Ligency Team",
+            "infos": "10 heures au total\n115 sessions\nDébutant"
+        },
+        {
+            "categorie": "Développement",
+            "titre": "Formation Complète Développeur de jeux vidéo - UNITY3D",
+            "intitule": "Apprendre la programmation en partant de zéro et créer des projets puissants avec Python : Web, Mobile, Jeux, Desktop",
+            "auteur": "Jean-philippe Parein",
+            "infos": "30,5 heures au total\n395 sessions\nTous les niveaux"
+        },
+        {
+            "categorie": "Développement",
+            "titre": "Le Deep Learning de A à Z",
+            "intitule": "Apprendre les fondamentaux du langage Python, appliqués sur des cas de manipulation de données (objectif Data Science)",
+            "auteur": "Hadelin de Ponteves, Charles Bordet",
+            "infos": "7 heures au total\n120 sessions\nDébutant"
+        },
+        {
+            "categorie": "Développement",
+            "titre": "Devenez développeur Java",
+            "intitule": "Devenez un monstre en Javascript et maitrîser les sujets qui font peur: hoisting, scopes, closures, prototypes, etc...",
+            "auteur": "Jean-Philippe EHRET",
+            "infos": "9,5 heures au total\n86 sessions\nIntermédiaire"
+        },
+        {
+            "categorie": "Développement",
+            "titre": "Apprendre Javascript: Cours Javascript Complet",
+            "intitule": "Apprendre à développer et Monétiser des jeux vidéo pour Smartphone, Windows, Mac... facilement avec Unity",
+            "auteur": "Javascript Lab",
+            "infos": "42 heures au total\n277 sessions\nDébutant"
+        },
+        {
+            "categorie": "Développement",
+            "titre": "Développeur d'Applications Mobiles | Formation Complète 2021",
+            "intitule": "Développez facilement une application Angular de Pokémons à partir d'un dossier vide, avec Angular et TypeScript.",
+            "auteur": "Jonathan Roux | Python - C# - iOS - Android",
+            "infos": "7 heures au total\n214 sessions\nDébutant"
+        },
+        {
+            "categorie": "Développement",
+            "titre": "React 16+ Le Guide Complet (+Redux, React Router & Firebase)",
+            "intitule": "Maîtrisez Javascript grâce au cours le plus complet sur internet ! Projets, exercices, quiz, ES8 et bien d’autres !",
+            "auteur": "Antho Welc",
+            "infos": "14,5 heures au total\n210 sessions\nTous les niveaux"
+        },
+        {
+            "categorie": "Développement",
+            "titre": "Développeur Python | Formation Complète 2021",
+            "intitule": null,
+            "auteur": "Jonathan Roux | Python - C# - iOS - Android",
+            "infos": "19,5 heures au total\n207 sessions\nDébutant"
+        },
+        {
+            "categorie": "Développement",
+            "titre": "Python : Cours complet pour débutant (Manipulation de Data)",
+            "intitule": "Apprendre les fondamentaux du langage Python, appliqués sur des cas de manipulation de données (objectif Data Science)",
+            "auteur": "Rod | Python - SQL - Data Science - Machine Learning - Deep Learning, MonCoachData | Data Science - Machine Learning - Deep Learning - Trading",
+            "infos": "10 heures au total\n115 sessions\nDébutant"
+        },
+        {
+            "categorie": "Développement",
+            "titre": "VRAIMENT Bien Comprendre Javascript",
+            "intitule": "Devenez un monstre en Javascript et maitrîser les sujets qui font peur: hoisting, scopes, closures, prototypes, etc...",
+            "auteur": "John Taieb (Codeur), Apprendre à Coder",
+            "infos": "30,5 heures au total\n395 sessions\nTous les niveaux"
+        },
+        {
+            "categorie": "Développement",
+            "titre": "Maîtriser Unity et le C# | Guide Complet Développeur",
+            "intitule": "Le développement de jeux vidéo de A à Z. Distribuez, Monétisez, QuizzGame, Smartphone,FPS, Google Store, avec UNITY 3D",
+            "auteur": "Jean-philippe Parein",
+            "infos": "38 heures au total\n239 sessions\nTous les niveaux"
+        },
+        {
+            "categorie": "Développement",
+            "titre": "Angular 9 : Développer votre première application (2021)",
+            "intitule": "Maîtrisez Javascript grâce au cours le plus complet sur internet ! Projets, exercices, quiz, ES8 et bien d’autres !",
+            "auteur": "Simon DIENY (React | Angular | Vue | Node)",
+            "infos": "9,5 heures au total\n86 sessions\nIntermédiaire"
+        },
+        {
+            "categorie": "Développement",
+            "titre": "JavaScript : la formation ULTIME",
+            "intitule": "Apprendre la programmation en partant de zéro et créer des projets puissants avec JS : Web, Mobile",
+            "auteur": "Louis Nicolas Leuillet, Believemy FR",
+            "infos": "14,5 heures au total\n210 sessions\nTous les niveaux"
+        }
+    ]
+}

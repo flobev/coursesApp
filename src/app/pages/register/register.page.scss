@@ -1,0 +1,14 @@
+ion-title {
+  text-align: center;
+}
+
+ion-row {
+  display: flex;
+  justify-content: center;
+  top: 10%;
+  position: absolute;
+
+  ion-item {
+    margin-bottom: 10px;
+  }
+}
