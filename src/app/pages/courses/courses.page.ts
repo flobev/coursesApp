@@ -37,14 +37,19 @@ export class CoursesPage implements OnInit {
         }
     });
   }
- 
+  
+  //Lie les données json à l'interface
   async ngOnInit() {
     this.feeds = await this.feed.getDataBJsonCourse()
   }
 
-  async goToVideo() {
+  //Récupère le cours choisi et renvoi les infos du cours
+  async goToVideo(event, course) {
     const modal = await this.modal.create({
-        component: YoutubeVideoComponent
+      component: YoutubeVideoComponent,
+      componentProps: {
+        'courses': course
+      }
     });
     return await modal.present();
   }

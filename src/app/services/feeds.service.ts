@@ -24,6 +24,7 @@ export class FeedsService {
                 for (const item of items) {
                     //Ajout dans le tableau la clé et la valeur de l'article
                     courses.push({
+                        category: item.categorie,
                         title: item.titre,
                         description: item.intitule,
                         author: item.auteur,

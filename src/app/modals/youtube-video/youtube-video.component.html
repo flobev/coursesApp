@@ -3,9 +3,21 @@
         <ion-buttons slot="start" (click)="close()">
             <ion-icon name="chevron-back-outline" style="cursor: pointer;"></ion-icon>
         </ion-buttons>
+        <ion-buttons class="btnShopIcon">
+            <ion-icon style="color: white;" src="./../../assets/icon/shopping-cart.svg"></ion-icon>
+        </ion-buttons>
     </ion-toolbar>
 </ion-header>
-
 <ion-content>
+    <ion-card>
+        <ion-card-header class="courseTitleBorder">
+            <ion-card-title [innerHTML]="courses.title"></ion-card-title>
+        </ion-card-header>
+    </ion-card>
     <p style="color: white;">test modal</p>
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button>
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
 </ion-content>

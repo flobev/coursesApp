@@ -14,7 +14,7 @@
     <ion-card-content [innerHTML]="feed.description">
     </ion-card-content>
     <ion-card-content>{{ feed.infos }}</ion-card-content>
-    <p (click)="goToVideo()">Video Player ?</p>
+    <ion-button expand="block" fill="outline" (click)="goToVideo($event, feed)">Ouvrir</ion-button>
   </ion-card>
 
 </ion-content>
