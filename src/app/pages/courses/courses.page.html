@@ -8,8 +8,8 @@
 
   <ion-card *ngFor="let feed of feeds">
     <ion-card-header>
-      <ion-card-subtitle>{{ feed.title }}</ion-card-subtitle>
-      <ion-card-title>{{ feed.author }}</ion-card-title>
+      <ion-card-subtitle>{{ feed.author }}</ion-card-subtitle>
+      <ion-card-title>{{ feed.title }}</ion-card-title>
     </ion-card-header>
     <ion-card-content [innerHTML]="feed.description">
     </ion-card-content>

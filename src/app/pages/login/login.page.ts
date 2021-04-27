@@ -26,18 +26,18 @@ export class LoginPage implements OnInit {
   ) { }
 
   async ngOnInit() {
-    let token;
-    // Si plateforme est Desktop alors ajout du localStorage dans la variable token
+    /* let token;
+    // Si plateforme est Desktop alors récupération de la variable token
     if (this.platform.is("desktop")) {
-        token = localStorage.getItem('token')
+      token = localStorage.getItem('token')
     } else {
-        token = await this.storage.getItem('token')
+      token = await this.storage.getItem('token')
     }
     (token == null) ? console.log("Token vide !") : console.log(token);
-    
+
     //Si token est renseigné alors direction la vue tabs
     if (token !== undefined && token !== null)
-        this.router.navigate(['/tabs'])
+      this.router.navigate(['/tabs']) */
   }
 
   checkEmail() {
@@ -49,26 +49,23 @@ export class LoginPage implements OnInit {
   //Affiche le modal ForgotPasswordComponent
   async forgotPassword() {
     const modal = await this.modal.create({
-        component: ForgotPasswordComponent,
-        componentProps: {
-            'emailer': this.email
-        }
+      component: ForgotPasswordComponent,
+      componentProps: {
+        'emailer': this.email
+      }
     });
     return await modal.present();
   }
 
   async loginForm() {
-    const load = await this.loading.create({
-      message: 'Please wait...',
-    });
-    await load.present();
-    console.log('Email : ' + this.email, 'Mdp :' + this.pass);
+    let email;
+    let password;
 
-    localStorage.setItem('email',this.email);
-    localStorage.setItem('mdp',this.pass);
+    email = localStorage.setItem('email', this.email);
+    password = localStorage.setItem('mdp', this.pass);
 
-    console.log('Données stockées = ' + localStorage.getItem('email'));
+    console.log('Email stocké = ' + localStorage.getItem('email'));
 
-    await this.loading.dismiss();
+    console.log('Mot de passe stocké = ' + localStorage.getItem('mdp'));
   }
 }
