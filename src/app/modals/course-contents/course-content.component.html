@@ -9,14 +9,20 @@
     </ion-toolbar>
 </ion-header>
 <ion-content>
+    <ion-backdrop tappable="false"></ion-backdrop>
     <ion-card>
         <ion-card-header class="courseTitleBorder">
             <ion-card-title [innerHTML]="courses.title"></ion-card-title>
         </ion-card-header>
     </ion-card>
-    <p style="color: white;">test modal</p>
+    <!-- <div [innerHTML]="courses.content">
+        <div *ngFor="let content of course">
+            <p>{{ course.content }}</p>
+        </div>
+    </div> -->
+    <p [innerHTML]="courses.content"></p>
     <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-        <ion-fab-button>
+        <ion-fab-button (click)="addCourseToOrder(courses)">
             <ion-icon name="add"></ion-icon>
         </ion-fab-button>
     </ion-fab>

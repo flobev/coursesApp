@@ -1,4 +1,4 @@
-import { YoutubeVideoComponent } from './modals/youtube-video/youtube-video.component';
+import { CourseContentComponent } from './modals/course-contents/course-content.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -19,8 +19,8 @@ import { IonicStorageModule } from '@ionic/storage-angular';
 
 
 @NgModule({
-  declarations: [AppComponent, YoutubeVideoComponent],
-  entryComponents: [YoutubeVideoComponent],
+  declarations: [AppComponent, CourseContentComponent],
+  entryComponents: [CourseContentComponent],
   imports: [BrowserModule, CommonModule, IonicModule.forRoot(), IonicStorageModule.forRoot(), AppRoutingModule, HttpClientModule, YouTubePlayerModule],
   providers: [StatusBar, SplashScreen, NativeStorage, { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

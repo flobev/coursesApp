@@ -8,8 +8,9 @@ import { AuthService } from '../../services/auth.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.page.html',
-  styleUrls: ['./register.page.scss', '../login/login.page.scss'],
+  styleUrls: ['./register.page.scss', '../login/login.page.scss', '../../app.component.scss'],
 })
+
 export class RegisterPage implements OnInit {
 
   isErrorMail: boolean = true;
@@ -23,7 +24,26 @@ export class RegisterPage implements OnInit {
     private loading: LoadingController
   ) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    // an array
+    const arr = [1, 2, 3, 4, 5];
+
+    // convert array to JSON string
+    // using JSON.stringify()
+    const jsonArr = JSON.stringify(arr);
+
+    // save to localStorage
+    localStorage.setItem("array", jsonArr);
+
+    // get the string
+    // from localStorage
+    const str = localStorage.getItem("array");
+
+    // convert string to valid object
+    const parsedArr = JSON.parse(str);
+
+    console.log(parsedArr);
+  }
 
   checkEmail() {
     const regex = new RegExp(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g);
@@ -36,12 +56,14 @@ export class RegisterPage implements OnInit {
   }
 
   async register() {
+
     const load = await this.loading.create({
       message: 'Please wait...',
     });
     await load.present();
     this.user.username = this.user.email.split('@')[0];
     console.log("Données utilisateurs : ", this.user);
+
     //Ajout des données utilisateur dans l'api ou fichier json
     this.auth.register(this.user).then(async (data) => {
       console.log(data);
@@ -55,7 +77,6 @@ export class RegisterPage implements OnInit {
       });
       toast.present();
       await this.loading.dismiss();
-    })
+    });
   }
-
 }

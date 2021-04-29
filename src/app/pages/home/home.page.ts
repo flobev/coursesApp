@@ -18,23 +18,8 @@ export class HomePage implements OnInit {
   constructor(private auth: AuthService, private platform: Platform, private storage: NativeStorage, private router: Router, private loading: LoadingController) { }
 
   async ngOnInit() {
-    const load = await this.loading.create({
-      message: 'Please wait...',
-    });
-    await load.present();
-    localStorage.setItem('name', "flo")
-    /* localStorage.setItem('user', JSON.stringify(user.user)) */
+    //Conversion d'un Objet Json en array (liste)
+    //localStorage.setItem('user', JSON.stringify(user.user))
 
-    console.log(this.platform.platforms())
-    let token;
-    token = localStorage.getItem('name')
-    console.log(token);
-    await this.loading.dismiss();
-  }
-
-
-  getUser(mail, password) {
-    localStorage.setItem('mail', mail)
-    localStorage.setItem('password', password)
   }
 }

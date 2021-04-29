@@ -6,15 +6,23 @@
 
 <ion-content>
 
-  <ion-card *ngFor="let feed of feeds">
+  <ion-card *ngFor="let course of lstCourses">
     <ion-card-header>
-      <ion-card-subtitle>{{ feed.author }}</ion-card-subtitle>
-      <ion-card-title>{{ feed.title }}</ion-card-title>
+      <div class="authorCourse">
+        <ion-icon name="person-circle-outline"></ion-icon>
+        <ion-card-subtitle>{{ course.author }}</ion-card-subtitle>
+      </div>
+      <ion-card-title>{{ course.title }}</ion-card-title>
     </ion-card-header>
-    <ion-card-content [innerHTML]="feed.description">
-    </ion-card-content>
-    <ion-card-content>{{ feed.infos }}</ion-card-content>
-    <ion-button expand="block" fill="outline" (click)="goToVideo($event, feed)">Ouvrir</ion-button>
+    <div class="descriptionCourse">
+      <ion-icon name="information-circle-outline"></ion-icon>
+      <ion-card-content [innerHTML]="course.description"></ion-card-content>
+    </div>
+    <div class="infosCourse">
+      <ion-icon name="time-outline"></ion-icon>
+      <ion-card-content>{{ course.infos }}</ion-card-content>
+    </div>
+    <ion-button expand="block" fill="outline" (click)="goToCourseContent($event, course)">Ouvrir</ion-button>
   </ion-card>
 
 </ion-content>

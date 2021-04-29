@@ -37,7 +37,7 @@
     <ion-col size="12">
       <ion-button
         [disabled]="isErrorMail || isErrorPhone || (user.password.trim() != user.confirm_password.trim() && user.confirm_password.trim().length < 2 )"
-        expand="full" class="btnLogin" (click)="register()">Login</ion-button>
+        expand="block" fill="outline" class="btnLogin" (click)="register()">Login</ion-button>
     </ion-col>
     <p> <a routerLink="/login">You already have an account ? Login</a> </p>
   </ion-row>
