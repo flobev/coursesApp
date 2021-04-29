@@ -17,7 +17,6 @@ export class FeedsService {
             this.http.request('GET', '/assets/data/courses.json').subscribe((cours: any) => {
                 //Assignation des cours dans le fichier json
                 cours = cours.courses;
-                console.log(cours);
                 //Création d'un tableau de type interface CourseFeed à vide
                 let courses: CourseFeed[] = []
                 //Parcours des cours des cours
@@ -33,7 +32,6 @@ export class FeedsService {
                         content: cour.content
                     })
                 }
-                console.log(courses);
                 //Si la requête s'est bien déroulé alors envoie des données
                 resolve(courses);
                 //Si la requête a échoué

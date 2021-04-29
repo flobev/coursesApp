@@ -1,7 +1,7 @@
 import { CourseFeed } from '../../interfaces/course-feed';
 import { FeedsService } from '../../services/feeds.service';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
-import { AlertController, ModalController } from '@ionic/angular';
+import { AlertController, ModalController, ToastController } from '@ionic/angular';
 import { Component, OnInit, Input } from '@angular/core';
 import { OrderPage } from '../../pages/order/order.page';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
@@ -17,11 +17,7 @@ export class CourseContentComponent implements OnInit {
 
   authorVar: string = "";
 
-  constructor(private modal: ModalController, private router: Router, private route: ActivatedRoute, private feed: FeedsService, private alertController: AlertController) { }
-
-  ionViewWillEnter() {
-    console.log("ionViewWillEnterYoutubeVideo");
-  }
+  constructor(private modal: ModalController, private router: Router, private route: ActivatedRoute, private feed: FeedsService, private toastControll: ToastController) { }
 
   ngOnInit() {
     /* const tag = document.createElement('script');
@@ -34,12 +30,11 @@ export class CourseContentComponent implements OnInit {
   //Message d'alerte lors de l'ajout d'un cours et envoie du cours au panier
   async addCourseToOrder() {
     /* this.sendCourse(); */
-    const alert = await this.alertController.create({
-      cssClass: 'my-custom-class',
-      header: 'Cours ajouté !',
-      buttons: ['OK']
+    const toast = await this.toastControll.create({
+      message: 'Your course have been saved.',
+      duration: 1000
     });
-    await alert.present();
+    toast.present();
   }
 
   async sendCourse() {

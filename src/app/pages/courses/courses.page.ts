@@ -27,7 +27,7 @@ export class CoursesPage implements OnInit {
   }
 
   //Récupère les données du cours choisi et redirige vers la modal
-  async goToCourseContent(event, course) {
+  async goToCourseContent(course) {
     const modal = await this.modal.create({
       component: CourseContentComponent,
       componentProps: {

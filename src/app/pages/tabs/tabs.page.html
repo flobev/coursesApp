@@ -1,25 +1,26 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>tabs</ion-title>
+    <ion-title>Courses App</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-tabs>
   <ion-tab-bar slot="bottom">
     <ion-tab-button tab="courses">
-      <ion-icon name="basketball-outline"></ion-icon>
-      <ion-label>Actu.</ion-label>
-      <ion-badge>10</ion-badge>
+      <ion-icon name="book-outline"></ion-icon>
+      <ion-label>Courses</ion-label>
+      <ion-badge *ngIf="lstCourses">{{lstCourses.length}}</ion-badge>
     </ion-tab-button>
 
     <ion-tab-button tab="profil">
-      <ion-icon src='/assets/icon/Asset 36.svg'></ion-icon>
-      <ion-label>Speakers</ion-label>
+      <ion-icon name="person-outline"></ion-icon>
+      <ion-label>Profil</ion-label>
     </ion-tab-button>
 
     <ion-tab-button tab="order">
-      <ion-icon name="person-outline"></ion-icon>
-      <ion-label>Profil</ion-label>
+      <ion-icon name="bag-handle-outline"></ion-icon>
+      <ion-label>Order</ion-label>
+      <ion-badge *ngIf="lstCourses">{{lstCourses.length}}</ion-badge>
     </ion-tab-button>
   </ion-tab-bar>
 </ion-tabs>

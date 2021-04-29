@@ -5,22 +5,20 @@ import { TabsPage } from './tabs.page';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'tabs',
     component: TabsPage,
     children: [{
       path: 'courses',
       children: [{
         path: '',
-        data: { json: false },
-        loadChildren: '../courses/courses.module#CoursesPageModule'
+        loadChildren: () => import('../courses/courses.module').then(m => m.CoursesPageModule)
       }],
-      data: { json: false },
+      data: { json: true },
     }, {
       path: 'profil',
       children: [{
         path: '',
-        data: { json: true },
-        loadChildren: '../profil/profil.module#ProfilPageModule'
+        loadChildren: () => import('../profil/profil.module').then(m => m.ProfilPageModule)
       }],
       data: { json: true },
     },
@@ -28,8 +26,7 @@ const routes: Routes = [
       path: 'order',
       children: [{
         path: '',
-        data: { json: true },
-        loadChildren: '../order/order.module#OrderPageModule'
+        loadChildren: () => import('../order/order.module').then(m => m.OrderPageModule)
       }],
       data: { json: true },
     },
@@ -39,6 +36,11 @@ const routes: Routes = [
       pathMatch: 'full'
     }
     ]
+  },
+  {
+    path: '',
+    redirectTo: '/tabs/courses',
+    pathMatch: 'full'
   }
 ];
 
