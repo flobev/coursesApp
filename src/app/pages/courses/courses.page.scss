@@ -5,3 +5,42 @@
 ion-card {
   background: rgba(82, 73, 61, 0.459);
 }
+
+ion-card {
+  display: flex;
+  flex-direction: column;
+  ion-card-title {
+    top: 16px;
+  }
+}
+
+div {
+  text-align: center;
+}
+
+div.authorCourse {
+  ion-card-subtitle {
+    font-size: 8px;
+  }
+}
+
+div.descriptionCourse {
+  ion-icon {
+    /* color: yellowgreen; */
+    position: relative;
+    top: 19px;
+  }
+}
+
+div.infosCourse {
+  ion-icon {
+    /* color: yellowgreen; */
+    position: relative;
+    float: left;
+    top: 14px;
+    left: 4px;
+  }
+  ion-card-content {
+    font-size: 11px;
+  }
+}

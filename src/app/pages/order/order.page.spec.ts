@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { YoutubeVideoComponent } from './youtube-video.component';
+import { OrderPage } from './order.page';
 
-describe('YoutubeVideoComponent', () => {
-  let component: YoutubeVideoComponent;
-  let fixture: ComponentFixture<YoutubeVideoComponent>;
+describe('OrderPage', () => {
+  let component: OrderPage;
+  let fixture: ComponentFixture<OrderPage>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ YoutubeVideoComponent ],
+      declarations: [ OrderPage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(YoutubeVideoComponent);
+    fixture = TestBed.createComponent(OrderPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

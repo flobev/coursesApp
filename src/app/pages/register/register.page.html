@@ -8,33 +8,36 @@
   <ion-row class="form">
 
     <ion-col size="12">
-      <ion-item>
+      <ion-item [ngClass]="user.first_name.trim().length < 2 ? 'errorEmail' : 'goodEmail'">
         <ion-label position="floating">Firstname</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" [(ngModel)]="user.first_name"></ion-input>
       </ion-item>
-      <ion-item>
+      <ion-item [ngClass]="user.last_name.trim().length < 2 ? 'errorEmail' : 'goodEmail'">
         <ion-label position="floating">Lastname</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" [(ngModel)]="user.last_name"></ion-input>
       </ion-item>
-      <ion-item>
+      <ion-item [ngClass]="isErrorPhone ? 'errorEmail' : 'goodEmail'">
         <ion-label position="floating">Phone</ion-label>
-        <ion-input type="tel"></ion-input>
+        <ion-input (keyup)="checkPhone()" type="tel" [(ngModel)]="user.phone"></ion-input>
       </ion-item>
-      <ion-item>
+      <ion-item [ngClass]="isErrorMail ? 'errorEmail' : 'goodEmail'">
         <ion-label position="floating">Email</ion-label>
-        <ion-input type="email"></ion-input>
+        <ion-input (keydown)="checkEmail()" type="email" [(ngModel)]="user.email"></ion-input>
       </ion-item>
-      <ion-item>
+      <ion-item [ngClass]="user.password.trim().length < 5 ? 'errorEmail' : 'goodEmail'">
         <ion-label position="floating">Password</ion-label>
-        <ion-input type="password"></ion-input>
+        <ion-input [(ngModel)]="user.password" type="password"></ion-input>
       </ion-item>
-      <ion-item>
+      <ion-item
+        [ngClass]="user.password.trim() != user.confirm_password.trim() || user.confirm_password.trim().length < 2 ? 'errorEmail' : 'goodEmail'">
         <ion-label position="floating">Re-Password</ion-label>
-        <ion-input type="password"></ion-input>
+        <ion-input [(ngModel)]="user.confirm_password" type="password"></ion-input>
       </ion-item>
     </ion-col>
     <ion-col size="12">
-      <ion-button expand="full" class="btnLogin" (click)="register()">Login</ion-button>
+      <ion-button
+        [disabled]="isErrorMail || isErrorPhone || (user.password.trim() != user.confirm_password.trim() && user.confirm_password.trim().length < 2 )"
+        expand="block" fill="outline" class="btnLogin" (click)="register()">Login</ion-button>
     </ion-col>
     <p> <a routerLink="/login">You already have an account ? Login</a> </p>
   </ion-row>

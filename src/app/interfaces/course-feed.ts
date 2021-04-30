@@ -1,9 +1,10 @@
 export interface CourseFeed {
-    id ? : number;
-    category ?: string[];
+    id?: string;
+    category?: string[];
     title: string;
     description: string;
-    author ? : string;
-    infos ? : string;
-    urlYt ? : string;
+    author?: string;
+    infos?: string;
+    urlYt?: string;
+    content: string;
 }
